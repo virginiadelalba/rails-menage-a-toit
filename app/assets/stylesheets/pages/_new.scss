@@ -1,0 +1,28 @@
+.post-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  background: #f76f6f;
+  font-family: 'Roboto';
+}
+
+.post {
+  width: 500px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+  background: white;
+}
+
+
+.pic {
+  width: 450px;
+  text-align: center;
+  margin-top: 30px;
+  height: 400px;
+  margin-bottom: 30px;
+  opacity: 0.5;
+}
