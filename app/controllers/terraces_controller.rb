@@ -8,6 +8,7 @@ class TerracesController < ApplicationController
   end
 
   def index
+    @terraces = Terrace.all
   end
 
   def show
