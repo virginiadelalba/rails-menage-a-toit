@@ -1,40 +1,41 @@
 <div class="post-container">
-  <div class="post">
-    <h3 class="details">Enter the details of your terrace</h3>
-    <%= simple_form_for(@terrace) do |f| %>
-      <%= f.error_notification %>
-      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="post">
+      <h3> Upload the best shot of your terrace! </h3>
+      <div class="background-image">
+      <a href="#" class="btn-green" id="separate">Upload pic</a>
+      </div>
+    </div>
+    <div class="post">
+      <h3 class="details">Enter the details of your terrace</h3>
+      <%= simple_form_for(@terrace) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-      <div class="form-inputs">
-        <%= f.input :title %>
-      </div>
-      <div class="form-inputs">
-        <%= f.input :address %>
-      </div>
-      <div class="form-inputs">
-        <%= f.input :description %>
-      </div>
-      <div class="form-inputs">
-        <%= f.input :capacity %>
-      </div>
-      <div class="form-inputs">
-        <%= f.input :price, :label => "Price in €" %>
-      </div>
+        <div class="form-inputs">
+          <%= f.input :title %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :address %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :description %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :capacity %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :price, :label => "Price in €" %>
+        </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, class: "btn-pink" %>
-      </div>
-    <% end %>
-    <%= link_to 'Back', root_path, class: "btn-back" %>
-  </div>
-  <div class="post">
-    <h3> Upload the best shot of your terrace! </h3>
-    <%= image_tag "terraza_casa_suecia.jpg", alt: "terraza", class: "pic" %>
-    <a href="#" class="btn-pink">Upload pic</a>
-  </div>
+        <div class="form-actions">
+          <%= f.button :submit, class: "btn-pink" %>
+        </div>
+      <% end %>
+      <%= link_to 'Back', root_path, class: "btn-back" %>
+    </div>
 
-  </div>
-</div>
+ </div>
 
+      <!-- <%= image_tag "terraza_casa_suecia.jpg", alt: "terraza", class: "pic" %> -->
 
 
