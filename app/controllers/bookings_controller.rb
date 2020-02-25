@@ -5,15 +5,15 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
     @terrace = Terrace.find(params[:terrace_id])
+    @booking = Booking.new(booking_params)
+    @booking.terrace = @terrace
     @booking.user = current_user
     if @booking.save
       redirect_to terrace_path(@terrace)
     else
-      render 'bookings/form'
+      render 'bookings/_form'
     end
-    raise
   end
 
   # def edit

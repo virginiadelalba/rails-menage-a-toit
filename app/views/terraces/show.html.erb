@@ -27,12 +27,12 @@
 
   <div class="terrace-infos mr-3">
     <h1 class='title'> <%= @terrace.title %> </h1>
-    <h3 class="address"> <%= @terrace.address %> </h3>
+    <h4 class="address"> <%= @terrace.address %> </h4>
     <p class="description"> <%= @terrace.description %> </p>
   </div>
 
   <div class="booking-infos px-3 py-2">
-    <h3 class="price">€ <%= @terrace.price %>/day </h3>
+    <h3 class="price">€ <%= @terrace.price %></h3>
 
     <%= render 'bookings/form'%>
   </div>
