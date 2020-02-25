@@ -21,9 +21,14 @@ body {
 .terrace-infos {
   width: 70%;
   margin-right: 40px;
+  color: #848383;
 
   .title {
     color: $pink;
+  }
+
+  .description {
+    color: black;
   }
 }
 
@@ -31,5 +36,10 @@ body {
   width: 30%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 4px;
+  color: #848383;
+
+  .price {
+    color: black;
+  }
 }
 
