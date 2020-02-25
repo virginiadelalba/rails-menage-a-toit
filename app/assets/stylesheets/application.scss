@@ -2,6 +2,7 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
+@import "config/base";
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
@@ -11,3 +12,29 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// COLOR PALETTE //
+
+$dark-green: #84bc45;
+$light-green: #b7e682;
+$pink: #f66f6f;
+
+h1 {
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+p {
+  font-family: "Roboto";
+  font-weight: 300;
+}
