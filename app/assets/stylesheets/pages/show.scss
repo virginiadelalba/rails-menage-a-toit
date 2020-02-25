@@ -1,6 +1,6 @@
-html {
-  margin-top: 0;
-  // padding: 0;
+body {
+  font-family: Roboto;
+  background-color: white;
 }
 
 .photo {
@@ -13,5 +13,23 @@ html {
   background-position: center;
 }
 
-.banner {
+.container {
+  width: 90%;
 }
+
+
+.terrace-infos {
+  width: 70%;
+  margin-right: 40px;
+
+  .title {
+    color: $pink;
+  }
+}
+
+.booking-infos {
+  width: 30%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+

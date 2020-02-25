@@ -1,0 +1,12 @@
+<%= simple_form_for [@terrace, @booking] do |f| %>
+
+  <h3>Dates</h3>
+  <!-- start_date and end_date -->
+ <%= f.input :booking_start_date, label: 'Start date' %>
+ <%= f.input :booking_end_date, label: 'End date' %>
+
+  <!-- message to terrace owner -->
+
+  <%= f.submit class: "btn btn-pink" %>
+
+<% end %>
