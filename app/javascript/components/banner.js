@@ -5,9 +5,12 @@ var banner_headers = $('h1[id^="content-"]').hide(),
 
     banner_headers.eq(i).fadeIn(500)
               .delay(1000)
+              .fadeOut(400, cycle);
 
-    i = ++i % banner-headers.length;
+    i = ++i % banner_headers.length;
 
 })();
+
+export { cycle };
 
 
