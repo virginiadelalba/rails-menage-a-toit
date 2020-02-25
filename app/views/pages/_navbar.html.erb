@@ -5,8 +5,14 @@
   </div>
 
   <div class="notification-actions">
-    <a href="#"><i class="fas fa-home"></i><%= link_to "Become a host", new_user_registration_path%></a>
-    <a href="#"><i class="fas fa-sign-out-alt"></i></a><%= link_to "Log-in", new_user_session_path%>
+    <%= link_to new_user_registration_path, class: "d-flex" do %>
+      <i class="fas fa-home"></i>
+      <p>Become a host</p>
+    <% end %>
+    <%= link_to new_user_session_path, class: "d-flex" do %>
+      <i class="fas fa-sign-out-alt"></i>
+      <p>Log in</p>
+    <% end %>
   </div>
 </div>
 
