@@ -12,6 +12,14 @@ class TerracesController < ApplicationController
   def new
     @terrace = Terrace.new
   end
+  
+  def index
+    if params[:query].present?
+      @terraces = Terrace.where("address ILIKE ?", "%#{params[:query]}%")
+    else
+      @terraces = Terrace.all
+    end
+  end
 
   def create
     @terrace = Terrace.new(terrace_params)
