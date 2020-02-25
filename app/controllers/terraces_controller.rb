@@ -11,6 +11,8 @@ class TerracesController < ApplicationController
   end
 
   def show
+    @terrace = Terrace.find(params[:id])
+    # Create booking later here.
   end
 
   # def edit
