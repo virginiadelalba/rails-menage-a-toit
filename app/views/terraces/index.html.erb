@@ -1,19 +1,2 @@
 
-<%= form_tag terraces_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a terrace"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
 
-<div>
-        <% @terraces.each do |terrace| %>
-            <div>
-              <h1><%= terrace.title %></h1>
-            </div>
-
-        <% end %>
-
-      </div>
