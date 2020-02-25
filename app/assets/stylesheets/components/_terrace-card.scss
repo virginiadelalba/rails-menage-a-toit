@@ -2,56 +2,53 @@ $dark-green: #84bc45;
 $light-green: #b7e682;
 $pink: #f76f6f;
 
-.card-trip {
+.card-terrace {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 350px;
-  height: 40%;
+  // width: 350px;
+  // height: 350px;
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: $pink
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #848383;
+  }
 }
 
-.card-trip > img {
+.card-terrace > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-  color: $pink
-}
 
-.card-trip h3 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #848383;
-}
-
-.card-address{
+.card-address {
   margin-top: 10px;
-}
 
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin-left: 5px;
-}
+  p{
+    font-size: 12px;
+    opacity: .7;
+    margin-left: 5px;
+  }
 
-.card-trip-pricing {
-  margin-top:10px;
-}
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
 }
 
 .fa-map-marker-alt {
   color: #E0B764;
   font-size: 15px;
+}
+
+.card-top {
+  margin: 10px 15px;
+}
+
+.card-bottom {
+  margin: 10px 15px;
 }
