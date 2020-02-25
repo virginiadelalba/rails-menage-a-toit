@@ -1,0 +1,24 @@
+.index-search-container{
+  justify-content: center;
+  text-align: center;
+
+
+}
+
+.index-search-form {
+  position: fixed;
+  left: 29%;
+  border-radius: 4px;
+  text-align: center;
+  width: 40%;
+  border: none;
+  background-color: white;
+  margin: 32px auto;
+  color: black;
+  border: 1px solid rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.index-search-form::placeholder {
+  color: rgba(0, 0, 0, 0.6)
+}
