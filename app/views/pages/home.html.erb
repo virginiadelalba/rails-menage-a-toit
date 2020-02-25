@@ -1,6 +1,25 @@
 
 <div class="home-banner">
-  <%= image_tag "white-down-arrow.png", width: 80, class: 'banner-arrow' %>
+
+  <div class="d-flex flex-row justify-content-center">
+    <h1 class="banner-text">Find the perfect Terrace to &nbsp</h1>
+      <h1 id="content-1" class="banner-text">reconnect with friends.</h1>
+      <h1 id="content-2" class="banner-text">get lost in conversation.</h1>
+      <h1 id="content-3" class="banner-text">find inspirational views.</h1>
+      <h1 id="content-4" class="banner-text"></h1>
+  </div>
+
+  <div class="form-group">
+    <%= simple_form_for :search, url: terraces_path, method: "GET", html: { class: 'op-light'} do |f| %>
+      <%= f.input :name, placeholder: 'search for your favorite drink or scroll down to find something new', class: 'form-control', input_html: {value: ""}, label: false %>
+    <% end %>
+    <%= image_tag "white-down-arrow.png", alt: "Le Wagon", width: 80, class: 'mt-n4 banner-arrow' %>
+  </div>
+
+
+  <div>
+      <%= image_tag "white-down-arrow.png", width: 80, class: 'mt-1 banner-arrow' %>
+  </div>
 </div>
 
 
