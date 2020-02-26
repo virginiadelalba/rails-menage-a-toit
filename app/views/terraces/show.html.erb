@@ -25,6 +25,10 @@
 
 <div class="container d-flex mx-auto my-4">
 
+   <% @terrace.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+
   <div class="terrace-infos mr-3">
     <h1 class='title'> <%= @terrace.title %> </h1>
     <h4 class="address"> <%= @terrace.address %> </h4>
