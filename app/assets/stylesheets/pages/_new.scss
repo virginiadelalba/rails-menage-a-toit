@@ -5,6 +5,8 @@
   margin-bottom: 30px;
   background: #f76f6f;
   font-family: 'Roboto';
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .post {
@@ -36,3 +38,13 @@
   opacity: 0.8;
 }
 
+.photo-button-container {
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.photo-button {
+  color: green;
+  width: 100%;
+}
