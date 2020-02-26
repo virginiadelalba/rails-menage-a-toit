@@ -2,13 +2,6 @@ class TerracesController < ApplicationController
   before_action :set_terrace, only: [:show]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-  def index
-  end
-
-  def show
-    # Create booking later here.
-  end
-
   def new
     @terrace = Terrace.new
   end
@@ -36,16 +29,6 @@ class TerracesController < ApplicationController
       render :new
     end
   end
-
-
-  # def edit
-  # end
-
-  # def update
-  # end
-
-  # def destroy
-  # end
 
   private
 
