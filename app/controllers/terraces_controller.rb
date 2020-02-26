@@ -12,7 +12,7 @@ class TerracesController < ApplicationController
   def new
     @terrace = Terrace.new
   end
-  
+
   def index
     if params[:query].present?
       @terraces = Terrace.where("address ILIKE ?", "%#{params[:query]}%")
