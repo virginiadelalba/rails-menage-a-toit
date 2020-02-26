@@ -1,14 +1,15 @@
 <div class="home-banner">
 
-  <div class="justify-content-center">
-    <h1 class="banner-text">Find the perfect Terrace</h1>
+  <div class="justify-content-center ">
+    <h1>It's all about the company</h1>
+    <p> Find the perfect terrace to share with your close ones </p>
 
     <div class="form-group">
       <%= form_tag terraces_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control home-search-form",
-          placeholder: "search anywhere"
+          placeholder: "Search anywhere"
         %>
       <% end %>
     </div>
@@ -23,27 +24,24 @@
   <div>
     <h2 class="text-center mb-5 home-card-header">Renting with Menage-a-Toit</h2>
   </div>
+
   <div class="home-card-container">
+    <!-- 24/7 customer support -->
     <div class="home-card" style="">
-      24/7 Customer Support
-      <div>
         <i class="fas fa-phone home-card-icon"></i>
+      <div class="align-items-baseline">
+        24/7 Customer Support
       </div>
-
     </div>
-
+    <!-- hospitality standars -->
     <div class="home-card" style="">
-      Global Hospitality Standards
-      <div>
         <i class="fas fa-concierge-bell home-card-icon"></i>
+      <div>
+        Global Hospitality Standards
       </div>
     </div>
-
-    <div class="home-card" style="">
-      <div class="d-flex flex-column">
-        <span>Five-Star</span>
-        <span>Hosts</span>
-      </div>
+    <!-- five stars -->
+    <div class="home-card d-flex flex-column  " style="">
       <div class="d-flex stars-container">
         <i class="fas fa-star home-card-stars"></i>
         <i class="fas fa-star home-card-stars"></i>
@@ -51,9 +49,13 @@
         <i class="fas fa-star home-card-stars"></i>
         <i class="fas fa-star home-card-stars"></i>
       </div>
-
+      <div class="d-flex flex-column ">
+        <span>Five-Star</span>
+        <span>Hosts</span>
+      </div>
     </div>
   </div>
+
 </div>
 
 
