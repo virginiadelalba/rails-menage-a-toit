@@ -2,7 +2,6 @@
   justify-content: center;
   text-align: center;
 
-
 }
 
 .index-search-form {
@@ -13,10 +12,10 @@
   width: 40%;
   border: none;
   background-color: white;
-  margin: 32px auto;
+  margin: 0px auto;
   color: black;
   border: 1px solid rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 2;
 }
 
 .index-search-form::placeholder {
