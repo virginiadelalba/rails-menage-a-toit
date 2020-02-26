@@ -10,10 +10,15 @@ class BookingsController < ApplicationController
     @booking.terrace = @terrace
     @booking.user = current_user
     if @booking.save
-      redirect_to terrace_path(@terrace)
+      redirect_to booking_path(@booking)
     else
       render 'bookings/_form'
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    @terrace = @booking.terrace
   end
 
   # def edit

@@ -11,6 +11,7 @@ body {
   height: 70vh;
   background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .container {
@@ -42,6 +43,15 @@ body {
 
   .price {
     color: black;
+  }
+}
+
+.owner-div {
+  width: 30%;
+  text-align: center;
+
+  .edit-btn {
+    margin: 30px 0;
   }
 }
 

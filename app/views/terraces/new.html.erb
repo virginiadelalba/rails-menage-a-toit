@@ -26,6 +26,11 @@
         <div class="form-inputs">
           <%= f.input :price, :label => "Price in €" %>
         </div>
+        <div>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        </div>
+
+
 
         <div class="form-actions">
           <%= f.button :submit, class: "btn-pink" %>
@@ -36,6 +41,6 @@
 
  </div>
 
-      <!-- <%= image_tag "terraza_casa_suecia.jpg", alt: "terraza", class: "pic" %> -->
+
 
 
