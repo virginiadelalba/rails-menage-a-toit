@@ -2,17 +2,10 @@ class TerracesController < ApplicationController
   before_action :set_terrace, only: [:show]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-  def index
-  end
-
-  def show
-    # Create booking later here.
-  end
-
   def new
     @terrace = Terrace.new
   end
-  
+
   def index
     if params[:query].present?
       @terraces = Terrace.where("address ILIKE ?", "%#{params[:query]}%")
@@ -25,6 +18,7 @@ class TerracesController < ApplicationController
   def show
     @terrace = Terrace.find(params[:id])
     @booking = Booking.new
+  end
 
   def create
     @terrace = Terrace.new(terrace_params)
@@ -35,16 +29,6 @@ class TerracesController < ApplicationController
       render :new
     end
   end
-
-
-  # def edit
-  # end
-
-  # def update
-  # end
-
-  # def destroy
-  # end
 
   private
 
