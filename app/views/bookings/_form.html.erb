@@ -1,0 +1,14 @@
+<%#= simple_form_for :search, method: :get do |t| %>
+
+<%= simple_form_for [@terrace, @booking] do |f| %>
+
+  <h5>Dates</h5>
+  <!-- start_date and end_date -->
+ <%= f.input :booking_start_date, as: :string, label: 'Start date', input_html: {class: "datepicker", id: "start_date"} %>
+ <%= f.input :booking_end_date, as: :string, label: 'End date', input_html: {class: "datepicker", id: "end_date"} %>
+
+  <!-- message to terrace owner -->
+
+  <%= f.submit "Book now", class: "btn btn-pink" %>
+
+<% end %>
