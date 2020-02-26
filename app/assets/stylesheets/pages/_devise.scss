@@ -1,0 +1,39 @@
+.login-form, .sign-up {
+  width: 40%;
+  padding: 100px 100px;
+  height: 89vh;
+
+  h2 {
+    color: $pink;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  // .form-inputs input {
+  //   outline: none;
+  // }
+}
+
+.login-image {
+  width: 60%;
+  background-image: url('https://images.unsplash.com/photo-1506920801165-f8859bab6b3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.signup-image {
+  width: 60%;
+  background-image: url('https://images.unsplash.com/photo-1545039986-c631605fb605?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-btn {
+  margin-bottom: 25px;
+}
+
+.signup-btn {
+  margin-bottom: 15px;
+}
