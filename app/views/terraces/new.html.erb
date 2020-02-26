@@ -1,12 +1,7 @@
 <div class="post-container">
+
     <div class="post">
-      <h3> Upload the best shot of your terrace! </h3>
-      <div class="background-image">
-      <a href="#" class="btn-green" id="separate">Upload pic</a>
-      </div>
-    </div>
-    <div class="post">
-      <h3 class="details">Enter the details of your terrace</h3>
+      <h3 class="details">Upload the details of your terrace</h3>
       <%= simple_form_for(@terrace) do |f| %>
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -26,13 +21,13 @@
         <div class="form-inputs">
           <%= f.input :price, :label => "Price in €" %>
         </div>
-        <div>
+        <div class="photo-button-container">
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         </div>
 
 
 
-        <div class="form-actions">
+        <div class="form-actions mt-5">
           <%= f.button :submit, class: "btn-pink" %>
         </div>
       <% end %>

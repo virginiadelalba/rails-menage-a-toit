@@ -8,4 +8,5 @@ class Terrace < ApplicationRecord
   validates :capacity, presence: true
   validates :price, presence: true
   has_many_attached :photos
+  validates :photos, presence: true
 end
