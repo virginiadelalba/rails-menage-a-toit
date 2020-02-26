@@ -28,12 +28,28 @@
   <div class="terrace-infos mr-3">
     <h1 class='title'> <%= @terrace.title %> </h1>
     <h4 class="address"> <%= @terrace.address %> </h4>
+    <p class="capacity">Capacity: <%= @terrace.capacity %></p>
     <p class="description"> <%= @terrace.description %> </p>
   </div>
 
-  <div class="booking-infos px-3 py-2">
-    <h3 class="price">€ <%= @terrace.price %></h3>
+    <% if current_user == @terrace.user %>
+      <div class="owner-div">
+        <div class="edit-btn">
+          <button class="btn btn-pink"><i class="far fa-edit"></i>  Edit</button>
+        </div>
+        <div class="delete-btn">
+          <button class="btn btn-pink"><i class="far fa-trash-alt"></i>  Delete</button>
+        </div>
+      </div>
+    <% else %>
+    <div class="booking-infos px-3 py-2">
+      <h3 class="price">€ <%= @terrace.price %></h3>
 
-    <%= render 'bookings/form'%>
-  </div>
+      <%= render 'bookings/form'%>
+    </div>
+  <% end %>
+
+
+
+
 </div>
