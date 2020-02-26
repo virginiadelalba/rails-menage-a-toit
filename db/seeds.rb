@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Destroy Terraces"
-Terrace.destroy_all if Rails.env.development?
+Terrace.destroy_all
 
 puts "Destroy Users"
-User.destroy_all if Rails.env.development?
+User.destroy_all
 
 
 # puts "Creating users"
