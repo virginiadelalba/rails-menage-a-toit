@@ -12,7 +12,14 @@ $pink: #f76f6f;
   h2 {
     font-size: 20px;
     font-weight: bold;
-    color: $pink
+    color: $pink;
+  }
+
+
+
+  a {
+    text-decoration: none;
+    font-size: 20px;
   }
 
   h3 {
@@ -24,6 +31,7 @@ $pink: #f76f6f;
 
 .card-terrace > img {
   height: 200px;
+  max-height: 200px;
   width: 100%;
   object-fit: cover;
 }
