@@ -24,13 +24,12 @@ $pink: #f76f6f;
 .btn-green {
   color: $dark-green;
   background: $light-green;
-  border: 1px solid $light-green;
   padding: 3px 10px;
   border-radius: 50px;
-  font-weight: 700;
-  font-size: 10px;
   transition: opacity 0.3s ease;
   text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
 
   &:hover {
     color: $dark-green;
