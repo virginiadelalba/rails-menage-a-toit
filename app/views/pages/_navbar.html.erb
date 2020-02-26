@@ -4,14 +4,29 @@
   <div class="notification-content">
   </div>
 
+
   <div class="notification-actions">
-    <%= link_to new_user_registration_path, class: "d-flex" do %>
+    <% if current_user %>
+      <%= link_to new_terrace_path, class: "d-flex" do %>
       <i class="fas fa-home"></i>
       <p>Become a host</p>
-    <% end %>
-    <%= link_to new_user_session_path, class: "d-flex" do %>
+       <% end %>
+    <% else  %>
+      <%= link_to new_user_registration_path, class: "d-flex" do %>
+      <i class="fas fa-home"></i>
+      <p>Become a host</p>
+      <% end %>
+     <% end %>
+    <% if current_user %>
+      <%= link_to terraces_path, class: "d-flex" do %>
+      <i class="fas fa-smile-beam"></i>
+      <p>Profile</p>
+      <% end %>
+      <% else  %>
+      <%= link_to new_user_session_path, class: "d-flex" do %>
       <i class="fas fa-sign-out-alt"></i>
       <p>Log in</p>
+      <% end %>
     <% end %>
   </div>
 </div>
