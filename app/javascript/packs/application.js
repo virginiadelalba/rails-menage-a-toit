@@ -1,9 +1,5 @@
 import "../plugins/flatpickr"
-
-// flatpickr(".datepicker", {
-//   altInput: true
-// })
-
+import 'flatpickr/dist/themes/airbnb.css';
 import rangePlugin from 'flatpickr/dist/plugins/rangePlugin';
 const fp = flatpickr("#start_date", {
   altInput: true,
@@ -22,9 +18,34 @@ const calculatePrice = () => {
 
   console.log('Calc');
   console.log(`start: ${start}`);
-  console.log(end);
+  console.log(`end: ${end}`);
   // console.log(Date.parse(start));
   console.log(new Date(start));
   console.log(new Date(end));
 }
 
+
+
+// import flatpickr from 'flatpickr';
+// import 'flatpickr/dist/themes/airbnb.css';
+// import rangePlugin from 'flatpickr/dist/plugins/rangePlugin';
+// const fp = flatpickr("#start_date", {
+//   altInput: true,
+//   "plugins": [new rangePlugin({ input: "#end_date"})],
+//   onChange: function(dateObj, dateStr) {
+//     const arr = dateStr.split(" to ");
+//     const startDate = Math.floor(Date.parse(arr[0]) / (1000 * 60 * 60 * 24));
+//     const endDate = Math.floor(Date.parse(arr[1]) / (1000 * 60 * 60 * 24));
+//     const daysTotal = endDate - startDate;
+//     const daysHtml = document.getElementById('days');
+//     const totalPriceHtml = document.getElementById('total-price');
+//     const pricePerDay = parseInt(document.getElementById('price').innerText);
+//     if (isNaN(daysTotal)) {
+//       daysHtml.innerText = 1;
+//       totalPriceHtml.innerText = 101;
+//     } else {
+//       daysHtml.innerText = daysTotal;
+//       totalPriceHtml.innerText = pricePerDay * daysTotal;
+//     }
+//   }
+// });
