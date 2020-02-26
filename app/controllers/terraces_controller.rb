@@ -30,6 +30,12 @@ class TerracesController < ApplicationController
     end
   end
 
+  def destroy
+    @terrace = Terrace.find(params[:id])
+    @terrace.destroy
+    redirect_to terraces_path
+  end
+
   private
 
   def set_terrace
