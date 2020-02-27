@@ -21,15 +21,9 @@
 
     <!-- ----DASHBOARD HAS BEEN REPLACED BY PROFILE---- -->
     <% if current_user %>
-
       <%= link_to list_bookings_path, class: "d-flex" do %>
-      <i class="fas fa-smile-beam"></i>
-      <p>My Bookings</p>
-
-      <%= link_to terraces_path, class: "d-flex" do %>
         <i class="fas fa-smile-beam"></i>
-        <p>Profile</p>
-
+        <p>My Bookings</p>
       <% end %>
       <!-- ----LOGOUT---- -->
       <%= link_to destroy_user_session_path, method: :delete, class: "d-flex" do%>
