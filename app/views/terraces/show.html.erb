@@ -1,3 +1,4 @@
+<!-- Carousel -->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
 
@@ -25,7 +26,8 @@
   </a>
 </div>
 
-<div class="container d-flex mx-auto my-4">
+<!-- Show terrace -->
+<div class="container d-flex mx-auto my-4 mb-5">
   <div class="terrace-infos mr-3">
     <h1 class='title'> <%= @terrace.title %> </h1>
     <h4 class="address"> <%= @terrace.address %> </h4>
@@ -37,12 +39,12 @@
       <div class="owner-div">
         <h3 class="price">€ <%= @terrace.price %></h3>
         <div class="edit-btn">
-          <button class="btn btn-pink"><i class="far fa-edit"></i>  Edit</button>
+          <button class="btn btn-pink width-btn"><i class="far fa-edit"></i> Edit</button>
         </div>
         <div class="delete-btn">
           <%= link_to terrace_path(@terrace), method: :delete, data: { confirm: "Are you sure?" } do %>
-            <button class="btn btn-pink">
-              <i class="far fa-trash-alt"></i>Delete
+            <button class="btn btn-pink width-btn">
+              <i class="far fa-trash-alt"></i> Delete
             </button>
           <% end %>
         </div>
@@ -55,10 +57,10 @@
           <p id="days-range"></p>
           <p id="price-total"></p>
         </div>
-
       </div>
   <% end %>
-
 </div>
 
-  <%= link_to "Back to Terraces", terraces_path, class:'btn btn-pink mt-5 ml-5'%>
+<div class="button">
+  <%= link_to "Back to Terraces", terraces_path, class:'btn btn-green center'%>
+</div>
