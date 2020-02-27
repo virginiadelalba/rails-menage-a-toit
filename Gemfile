@@ -17,9 +17,10 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 
-gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'cloudinary', '~> 1.13.2'
+
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

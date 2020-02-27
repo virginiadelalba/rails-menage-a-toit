@@ -12,6 +12,15 @@ class TerracesController < ApplicationController
     else
       @terraces = Terrace.all
     end
+
+    if Terrace.geocoded
+      @markers = @terraces.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude
+        }
+      end
+    end
   end
 
 
