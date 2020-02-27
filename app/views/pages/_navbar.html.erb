@@ -1,9 +1,9 @@
 
 <div class="notification">
   <%= link_to root_path, class: "d-flex" do %>
-  <i class="fas fa-angle-double-up" id="logo"></i>
-  <p class='logo-content'>Ménage-à-toit</p>
-   <% end %>
+    <i class="fas fa-angle-double-up" id="logo"></i>
+    <p class='logo-content'>Ménage-à-toit</p>
+  <% end %>
 
   <div class="notification-actions">
     <%# if current_user %>
@@ -25,11 +25,10 @@
         <i class="fas fa-smile-beam"></i>
         <p>Profile</p>
       <% end %>
-
       <!-- ----LOGOUT---- -->
       <%= link_to destroy_user_session_path, method: :delete, class: "d-flex" do%>
         <i class="fas fa-sign-out-alt"></i>
-        <p>Sign Out</p>
+        <p>Log Out</p>
       <% end %>
     <% else  %>
       <%= link_to new_user_session_path, class: "d-flex" do %>
