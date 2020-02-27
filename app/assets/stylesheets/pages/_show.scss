@@ -74,3 +74,14 @@ body {
   }
 }
 
+.range-price {
+  display: none;
+  margin-top: 20px;
+  // align-items: baseline;
+  justify-content: space-between;
+
+  #price-total {
+    font-weight: 700;
+  }
+}
+
