@@ -4,8 +4,9 @@
       <%= text_field_tag :query,
       params[:query],
       class: "form-control index-search-form mt-n5",
-        placeholder: "search anywhere"
-  <div>
+        placeholder: "search anywhere" %>
+      <% end %>
+  </div>
     <div class="form-group index-search-container">
       <%= form_tag terraces_path, method: :get do %>
         <%= text_field_tag :query,
