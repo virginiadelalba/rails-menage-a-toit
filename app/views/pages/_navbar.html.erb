@@ -6,26 +6,35 @@
    <% end %>
 
   <div class="notification-actions">
-    <% if current_user %>
-      <%= link_to new_terrace_path, class: "d-flex" do %>
+    <%# if current_user %>
+    <%= link_to (current_user ? new_terrace_path : new_user_registration_path), class: "d-flex" do %>
+    <%#= link_to new_terrace_path, class: "d-flex" do %>
       <i class="fas fa-home"></i>
       <p>Become a host</p>
-       <% end %>
-    <% else  %>
-      <%= link_to new_user_registration_path, class: "d-flex" do %>
-      <i class="fas fa-home"></i>
-      <p>Become a host</p>
-      <% end %>
-     <% end %>
+    <% end %>
+    <%# else  %>
+      <%#= link_to new_user_registration_path, class: "d-flex" do %>
+        <!-- <i class="fas fa-home"></i> -->
+        <!-- <p>Become a host</p> -->
+      <%# end %>
+    <%# end %>
+
+    <!-- ----DASHBOARD HAS BEEN REPLACED BY PROFILE---- -->
     <% if current_user %>
       <%= link_to terraces_path, class: "d-flex" do %>
-      <i class="fas fa-smile-beam"></i>
-      <p>Profile</p>
+        <i class="fas fa-smile-beam"></i>
+        <p>Profile</p>
       <% end %>
-      <% else  %>
+
+      <!-- ----LOGOUT---- -->
+      <%= link_to destroy_user_session_path, method: :delete, class: "d-flex" do%>
+        <i class="fas fa-sign-out-alt"></i>
+        <p>Sign Out</p>
+      <% end %>
+    <% else  %>
       <%= link_to new_user_session_path, class: "d-flex" do %>
-      <i class="fas fa-sign-out-alt"></i>
-      <p>Log in</p>
+        <i class="fas fa-sign-in-alt"></i>
+        <p>Log in</p>
       <% end %>
     <% end %>
   </div>
