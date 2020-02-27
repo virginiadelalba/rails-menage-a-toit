@@ -12,6 +12,15 @@ class TerracesController < ApplicationController
     else
       @terraces = Terrace.all
     end
+
+    if Terrace.geocoded
+      @markers = @terraces.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude
+        }
+      end
+    end
   end
 
 
@@ -28,6 +37,12 @@ class TerracesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @terrace = Terrace.find(params[:id])
+    @terrace.destroy
+    redirect_to terraces_path
   end
 
   private
