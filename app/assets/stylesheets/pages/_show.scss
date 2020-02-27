@@ -3,6 +3,12 @@ body {
   background-color: white;
 }
 
+.carousel-inner .carousel-item img {
+  height: 450px;
+  object-fit: cover;
+}
+
+
 .large-photo-container{
   width: 70%;
 }
