@@ -43,7 +43,7 @@
   opacity: 1;
   display: flex;
   margin-right: 20px;
-  width: 270px;
+  width: 300px;
   justify-content: space-between;
   // font-family:
 }
@@ -56,13 +56,12 @@ margin-top: 2px;
 margin-left: 4px;
 }
 
-
 .notification .notification-actions a {
   color: #f76f6f;
   margin-left: 10px;
   font-size: 16px;
   font-family: 'Roboto';
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .notification .notification-actions a:hover {
