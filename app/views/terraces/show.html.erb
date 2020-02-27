@@ -61,11 +61,15 @@
         </div>
       </div>
     <% else %>
-    <div class="booking-infos px-3 py-2">
-      <h3 class="price">€ <%= @terrace.price %></h3>
+      <div class="booking-infos p-3">
+        <h3 class="price"><%= @terrace.price %>€ / day</h3>
+        <%= render 'bookings/form'%>
+        <div class="range-price">
+          <p id="days-range"></p>
+          <p id="price-total"></p>
+        </div>
 
-      <%= render 'bookings/form'%>
-    </div>
+      </div>
   <% end %>
 
 
