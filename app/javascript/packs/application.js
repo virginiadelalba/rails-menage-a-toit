@@ -1,10 +1,7 @@
-import "../plugins/flatpickr"
-import 'flatpickr/dist/themes/airbnb.css';
-import rangePlugin from 'flatpickr/dist/plugins/rangePlugin';
-
+import { totalPrice } from 'plugins/booking.js'
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
-
 import { initMapbox } from '../plugins/init_mapbox';
+
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
 
@@ -60,3 +57,8 @@ const calculatePrice = () => {
 //     }
 //   }
 // });
+
+totalPrice();
+
+
+

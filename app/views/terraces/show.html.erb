@@ -48,19 +48,28 @@
 
     <% if current_user == @terrace.user %>
       <div class="owner-div">
+        <h3 class="price">€ <%= @terrace.price %></h3>
         <div class="edit-btn">
           <button class="btn btn-pink"><i class="far fa-edit"></i>  Edit</button>
         </div>
         <div class="delete-btn">
-          <button class="btn btn-pink"><i class="far fa-trash-alt"></i>  Delete</button>
+          <%= link_to terrace_path(@terrace), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <button class="btn btn-pink">
+              <i class="far fa-trash-alt"></i>Delete
+            </button>
+          <% end %>
         </div>
       </div>
     <% else %>
-    <div class="booking-infos px-3 py-2">
-      <h3 class="price">€ <%= @terrace.price %></h3>
+      <div class="booking-infos p-3">
+        <h3 class="price"><%= @terrace.price %>€ / day</h3>
+        <%= render 'bookings/form'%>
+        <div class="range-price">
+          <p id="days-range"></p>
+          <p id="price-total"></p>
+        </div>
 
-      <%= render 'bookings/form'%>
-    </div>
+      </div>
   <% end %>
 
 </div>
