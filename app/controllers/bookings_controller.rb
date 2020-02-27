@@ -21,6 +21,11 @@ class BookingsController < ApplicationController
     @terrace = @booking.terrace
   end
 
+  def list
+    @bookings = current_user.bookings
+    @terraces = current_user.terraces
+  end
+
   # def edit
   # end
 

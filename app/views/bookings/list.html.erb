@@ -1,0 +1,47 @@
+<div class="page-container">
+    <div class="row justify-content-around">
+      <div class="user-type">
+        <h4 class="p-4"></id>My upcoming bookings as a guest</h4>
+          <% @bookings.each do |booking|  %>
+            <div id="card-border" class="card flex-row flex-wrap align-items-center justify-content-between p-3 mb-3" style="width: 38rem">
+              <div class="content">
+                <p id="pink-title" class=""><strong><%= booking.terrace.title %> </strong></p>
+                <p class=""><small>from <%= booking.booking_start_date.strftime("%b %d %Y") %> to <%= booking.booking_end_date.strftime("%b %d %Y") %></small></p>
+                <div class="d-flex">
+                  <i class="fas fa-map-marker-alt align middle p-1">  </i>
+                  <p class="align-middle"><small>  in <%= booking.terrace.address %></small></p>
+                </div>
+                <%= link_to "Go to terrace", terrace_path(booking.terrace)%>
+              </div>
+              <div class="image">
+                <%= cl_image_tag booking.terrace.photos[0].key, height: 120, crop: :fill%>
+              </div>
+            </div>
+          <% end %>
+       </div>
+      <div class="user-type">
+        <h4 class="p-4">My upcoming bookings as a host</h4>
+          <% @terraces.each do |terrace|  %>
+            <% terrace.bookings.each do |booking|  %>
+              <div id="card-border" class="card flex-row flex-wrap align-items-center justify-content-between p-3 mb-3" style="width: 38rem">
+                <div class="content">
+                  <p id="pink-title" class=""><strong><%= booking.terrace.title %></strong></p>
+                  <p class=""><small>from <%= booking.booking_start_date.strftime("%b %d %Y") %> to <%= booking.booking_end_date.strftime("%b %d %Y") %></small></p>
+                   <div class="d-flex">
+                    <i class="fas fa-map-marker-alt align middle p-1">  </i>
+                    <p class="align-middle"><small>  in <%= booking.terrace.address %></small></p>
+                  </div>
+                  <%= link_to "Go to terrace", terrace_path(booking.terrace)%>
+                </div>
+                <div class="image">
+                  <%= cl_image_tag booking.terrace.photos[0].key, height: 120, crop: :fill%>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+    </div>
+  </div>
+
+
+
+
