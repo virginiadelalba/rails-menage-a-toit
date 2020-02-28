@@ -1,52 +1,41 @@
-<div class="main-container">
-
-    <%= link_to "Conversations", conversations_path, class:'btn-white float-left ml-2'%>
-
-
-
-  <div class="messages-main-container">
-
-
-    <div class="messages-container">
-      <% if @over_ten %>
-         <%= link_to 'Show Previous', '?m=all' %>
-      <% end %>
-
-      <div class="ui segment">
-        <% @messages.each do |message| %>
-          <% if message.body %>
-            <% user = User.find(message.user_id) %>
-            <div class="item">
-              <div class="content">
-                <div class="header list-text"><strong><%= user.email %></strong> <%= message.message_time %></div>
-                <div class="list">
-                  <div class="item" style="opacity: 0.7">
-                    <i class="right triangle icon"></i>
-                    <%= message.body %>
+<div class="wrapper-2">
+  <div class="main-container">
+      <%= link_to "< Conversations", conversations_path, class:'btn-pink float-left ml-2 mb-3 mt-3'%>
+    <div class="messages-main-container">
+      <div class="messages-container">
+        <% if @over_ten %>
+           <%= link_to 'Show Previous', '?m=all' %>
+        <% end %>
+        <div class="ui segment">
+          <% @messages.each do |message| %>
+            <% if message.body %>
+              <% user = User.find(message.user_id) %>
+              <div class="item">
+                <div class="content">
+                  <div class="header list-text"><strong><%= user.email %></strong> <%= message.message_time %></div>
+                  <div class="list">
+                    <div class="item" style="opacity: 0.7">
+                      <i class="right triangle icon"></i>
+                      <%= message.body %>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
+        </div>
+      </div>
+      <div class="reply-container">
+        <%= form_for [@conversation, @message], html: {class: "ui reply form reply-container"} do |f| %>
+          <div class="field">
+            <%= f.text_area :body, class: "form-control reply-container", style:"box-shadow: 0 0 15px rgba(0,0,0,0.2)"%>
+          </div>
+            <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
+          <div class="d-flex flex-row-reverse">
+            <%= f.submit "Add Reply", class: "btn-pink mr-2 mb-2" %>
+          </div>
         <% end %>
       </div>
-
     </div>
-
-    <div class="reply-container">
-      <%= form_for [@conversation, @message], html: {class: "ui reply form reply-container"} do |f| %>
-        <div class="field">
-          <%= f.text_area :body, class: "form-control reply-container"%>
-        </div>
-          <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-        <div class="d-flex flex-row-reverse">
-          <%= f.submit "Add Reply", class: "btn-pink mr-2 mb-2" %>
-        </div>
-
-      <% end %>
-
-    </div>
-
   </div>
-
 </div>

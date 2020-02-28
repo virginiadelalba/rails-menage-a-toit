@@ -11,17 +11,17 @@
 //   width: 10%;
 // }
 
-// .messages-main-container {
-//   justify-content: space-around;
-//   padding: 2%;
-//   // background-color: $pink;
-//   width: 80%;
-//   align-items: center;
-//   margin-bottom: -100px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   height: 80vh;
-// }
+.messages-main-container {
+  justify-content: space-around;
+  padding: 2%;
+  // background-color: $pink;
+  width: 100%;
+  align-items: center;
+  margin-bottom: -100px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60vh;
+}
 
 // .float-left {
 //   // float: left;
@@ -42,6 +42,10 @@
 
 .wrapper {
   height: 75vh;
+}
+
+.wrapper-2 {
+  height: 92vh;
 }
 
 .all-users-container {
@@ -75,8 +79,10 @@
   margin-top: 20px;
   border-radius: 5px;
   margin-bottom: 0px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: white;
   border: none;
+
 }
 
 .line {
