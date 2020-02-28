@@ -1,6 +1,7 @@
 .page-container {
   padding-top: 10px;
   height:100vh;
+  overflow: scroll;
 }
 
 .page-wrapper {
@@ -9,4 +10,10 @@
 
 .box-container {
   height:80vh;
+}
+
+.page-container-new {
+padding-top: 10px;
+  height:80vh;
+  overflow: scroll;
 }
