@@ -34,11 +34,59 @@ user11 = User.create(email: '11email@gmail.com', password: '12345678')
 # terrace4 = Terrace.create(user: user4, title: 'Sunny Rooftop in Florida', description: 'Enjoy the best of Florida in our terrace.', capacity: 50, address: 'Main Street, 42, 4° floor - Florida', price: 1500)
 
 puts "All users created, I hope!"
-file1 = URI.open("https://i.imgur.com/vL5HiEY.jpg")
-file2 = URI.open("https://i.imgur.com/QFojkFK.jpg")
-file3 = URI.open("https://i.imgur.com/FMElGxj.jpg")
+file1 = URI.open("https://i.imgur.com/zRjndK2.jpg")
+file2 = URI.open("https://i.imgur.com/6AHgHKK.jpg")
+file3 = URI.open("https://i.imgur.com/LuKRhwF.jpg")
 t1 = Terrace.new(title: "The Ultimate Empire Terrace", description: "It doesn't get more Manhattan than this", capacity: 350, address: "11 Madison Avenue, New York", price: 1200, available: true, user: User.last)
 t1.photos.attach(io: file1, filename: "img1", content_type: "image/jpg")
 t1.photos.attach(io: file2, filename: "img2", content_type: "image/jpg")
 t1.photos.attach(io: file3, filename: "img3", content_type: "image/jpg")
 t1.save!
+
+file4 = URI.open("https://i.imgur.com/kBKNh7I.jpg")
+file5 = URI.open("https://i.imgur.com/efDAOFF.jpg")
+file6 = URI.open("https://i.imgur.com/vxkfo7v.jpg")
+t2 = Terrace.new(title: "A Terrace in a Boat", description: "Cruise around the city in a terrace that floats", capacity: 80, address: "207 12th Ave, New York", price: 2000, available: true, user: User.last)
+t2.photos.attach(io: file4, filename: "img4", content_type: "image/jpg")
+t2.photos.attach(io: file5, filename: "img5", content_type: "image/jpg")
+t2.photos.attach(io: file6, filename: "img6", content_type: "image/jpg")
+t2.save!
+
+file7 = URI.open("https://i.pinimg.com/originals/0f/ef/ee/0fefeeb05d92c1a1c4fdad407209828c.jpg")
+file8 = URI.open("https://odis.homeaway.com/odis/listing/8bc7dffc-dd85-4218-9107-200abc3210b6.c10.jpg")
+file9 = URI.open("https://static.barcelona-home.com/960x/galleries/869/pictures/p18plnsq00a8t1tlvbf6jq5d56e.jpg")
+t3 = Terrace.new(title: "Hidden garden in the Village", description: "Come discover a magical oasis in the heart of the city", capacity: 50, address: "15 Thompson St, New York,", price: 2000, available: true, user: User.last)
+t3.photos.attach(io: file7, filename: "img7", content_type: "image/jpg")
+t3.photos.attach(io: file8, filename: "img8", content_type: "image/jpg")
+t3.photos.attach(io: file9, filename: "img9", content_type: "image/jpg")
+t3.save!
+
+file10 = URI.open("https://i.imgur.com/yn0ysLS.jpg")
+file11 = URI.open("https://i.imgur.com/rUJB9H1.jpg")
+file12 = URI.open("https://i.imgur.com/KIIDUoL.jpg")
+t4 = Terrace.new(title: "THE Madrid rooftop", description: "Madrid skyline at its best. Come enjoy the sunset.", capacity: 120, address: "Calle Gran Vía, 21, Madrid", price: 550, available: true, user: User.last)
+t4.photos.attach(io: file10, filename: "img10", content_type: "image/jpg")
+t4.photos.attach(io: file11, filename: "img11", content_type: "image/jpg")
+t4.photos.attach(io: file12, filename: "img12", content_type: "image/jpg")
+t4.save!
+
+file13 = URI.open("https://i.imgur.com/1U2NAoQ.jpg")
+file14 = URI.open("https://i.imgur.com/rJcPQvS.jpg")
+file15 = URI.open("https://i.imgur.com/e5i9PYJ.jpg")
+t5 = Terrace.new(title: "The most hip terrace in Madrid", description: "Feel the hood and the chill vibes", capacity: 80, address: "Calle de la Montera, 37, Madrid", price: 700, available: true, user: User.last)
+t5.photos.attach(io: file13, filename: "img13", content_type: "image/jpg")
+t5.photos.attach(io: file14, filename: "img14", content_type: "image/jpg")
+t5.photos.attach(io: file15, filename: "img15", content_type: "image/jpg")
+t5.save!
+
+file16 = URI.open("https://i.imgur.com/ZNxPnDJ.jpg")
+file17 = URI.open("https://i.imgur.com/MVCMZrG.jpg")
+file18 = URI.open("https://i.imgur.com/pJggvFh.jpg")
+t6 = Terrace.new(title: "The most hip terrace in Madrid", description: "Feel the hood and the chill vibes", capacity: 150, address: "Calle de Santa Isabel, 52, Madrid", price: 900, available: true, user: User.last)
+t6.photos.attach(io: file16, filename: "img16", content_type: "image/jpg")
+t6.photos.attach(io: file17, filename: "img17", content_type: "image/jpg")
+t6.photos.attach(io: file18, filename: "img18", content_type: "image/jpg")
+t6.save!
+
+
+
