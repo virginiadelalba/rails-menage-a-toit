@@ -28,6 +28,7 @@ class TerracesController < ApplicationController
   def show
     @terrace = Terrace.find(params[:id])
     @booking = Booking.new
+    @user = User.find(params[:id])
   end
 
   def create

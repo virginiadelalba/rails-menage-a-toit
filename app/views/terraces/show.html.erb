@@ -48,19 +48,30 @@
             </button>
           <% end %>
         </div>
+
       </div>
     <% else %>
       <div class="booking-infos p-3">
         <h3 class="price"><%= @terrace.price %>€ / day</h3>
         <%= render 'bookings/form'%>
+        <!------- new messages button. -->
+         <!-- edit btn -->
+
+
+        <!--  button above -->
+
+
         <div class="range-price">
           <p id="days-range"></p>
           <p id="price-total"></p>
         </div>
       </div>
   <% end %>
+
 </div>
 
+
 <div class="button">
+
   <%= link_to "Back to Terraces", terraces_path, class:'btn btn-green center'%>
 </div>
