@@ -2,61 +2,96 @@ $dark-green: #84bc45;
 $light-green: #b7e682;
 $pink: #f76f6f;
 
+
 .card-terrace {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // width: 350px;
+  // max-width: 100vh;
   // height: 350px;
+  // height: 500px;
 
   h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: $pink;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
   }
-
-
 
   a {
     text-decoration: none;
     font-size: 20px;
+    &:hover{
+      text-decoration:none !important;
+    }
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #848383;
   }
 }
 
-.card-terrace > img {
-  height: 200px;
-  max-height: 200px;
+// .card-terrace > img {
+//   height: 200px;
+//   max-height: 200px;
+//   width: 100%;
+//   object-fit: cover;
+// }
+
+.card-img > img{
   width: 100%;
+  height:200px;
   object-fit: cover;
+  overflow: hidden;
+}
+
+.card-body {
+  // height:110px;
+  // width: 320px;
+  // margin: 3px 3px;
 }
 
 
+.text-wrapper{
+    font-size: 20px;
+    font-weight: bold;
+    color: $pink;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 102px;
+}
+
 .card-address {
-  margin-top: 10px;
+  margin-top: 13px;
 
   p{
     font-size: 12px;
     opacity: .7;
     margin-left: 5px;
+    color: #848383;
   }
 
 }
 
 .fa-map-marker-alt {
   color: #E0B764;
-  font-size: 15px;
+  font-size: 12px;
 }
 
-.card-top {
-  margin: 10px 15px;
-}
+a {
+    text-decoration: none;
+    &:hover{
+      text-decoration:none !important;
+    }
+  }
 
-.card-bottom {
-  margin: 10px 15px;
-}
+
+
+
+
