@@ -1,6 +1,7 @@
 <div class="wrapper-2">
   <div class="main-container">
-      <%= link_to "< Conversations", conversations_path, class:'btn-pink float-left ml-2 mb-3 mt-3'%>
+
+      <%= link_to "Back to Conversations", conversations_path, class:'btn-pink float-left mb-3 mt-3'%>
     <div class="messages-main-container">
       <div class="messages-container">
         <% if @over_ten %>
@@ -32,7 +33,7 @@
           </div>
             <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
           <div class="d-flex flex-row-reverse">
-            <%= f.submit "Add Reply", class: "btn-pink mr-2 mb-2" %>
+            <%= f.submit "Add Reply", class: "btn-pink mt-3 mb-2" %>
           </div>
         <% end %>
       </div>

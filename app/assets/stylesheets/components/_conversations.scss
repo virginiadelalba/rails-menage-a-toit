@@ -1,7 +1,8 @@
-// .main-container {
-//   width: 80%;
-//   justify-content: center;
-// }
+.main-container {
+  width: 80%;
+  justify-content: center;
+  margin: 0 auto;
+}
 
 // .white-btn-div {
 //   display: flex;
@@ -20,13 +21,36 @@
   margin-bottom: -100px;
   margin-left: auto;
   margin-right: auto;
-  height: 60vh;
+  // height: 60vh;
 }
 
-// .float-left {
-//   // float: left;
-// }
+.float-left {
+    margin-left: 22px;
+}
 
+.conv-btn {
+  color: white;
+  padding: 8px 8px;
+  border-radius: 4px;
+  background: $pink;
+  transition: background 0.3s ease;
+  font-family: 'Roboto';
+  font-weight: 500;
+  width: 200px;
+
+  &:hover {
+  background: #E16565;
+  color: white;
+  }
+}
+
+.fas .fa-hand-point-left {
+  margin-right: 4px;
+
+  p {
+    padding-bottom: 0;
+  }
+}
 // .conversations-container {
 //   display: flex;
 //   justify-content: space-around;
@@ -45,7 +69,7 @@
 }
 
 .wrapper-2 {
-  height: 92vh;
+  height: 79vh;
 }
 
 .all-users-container {
@@ -68,7 +92,7 @@
   background-color: white;
   padding: 5%;
   border-radius: 5px;
-  height: 500px;
+  height: 45vh;
   width: 100%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   overflow: hidden;
