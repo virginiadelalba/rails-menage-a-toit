@@ -1,56 +1,63 @@
-.main-container {
-  width: 100%;
-  background-color: $pink;
-  justify-content: center;
+// .main-container {
+//   width: 80%;
+//   justify-content: center;
+// }
+
+// .white-btn-div {
+//   display: flex;
+//   padding: 20px;
+//   border-radius: 4px;
+//   background-color: white;
+//   width: 10%;
+// }
+
+// .messages-main-container {
+//   justify-content: space-around;
+//   padding: 2%;
+//   // background-color: $pink;
+//   width: 80%;
+//   align-items: center;
+//   margin-bottom: -100px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   height: 80vh;
+// }
+
+// .float-left {
+//   // float: left;
+// }
+
+// .conversations-container {
+//   display: flex;
+//   justify-content: space-around;
+//   padding: 5%;
+//   // background-color: $pink;
+//   width: 80%;
+//   align-items: center;
+//   margin-bottom: -100px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   height: 80vh;
+// }
+
+.wrapper {
+  height: 75vh;
 }
-
-.white-btn-div {
-  display: flex;
-  padding: 20px;
-  border-radius: 4px;
-  background-color: white;
-  width: 10%;
-}
-
-.messages-main-container {
-  justify-content: space-around;
-  padding: 2%;
-  background-color: $pink;
-  width: 80%;
-  align-items: center;
-  margin-bottom: -100px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 80vh;
-}
-
-.float-left {
-  // float: left;
-}
-
-.conversations-container {
-  display: flex;
-  justify-content: space-around;
-  padding: 5%;
-  background-color: $pink;
-  width: 80%;
-  align-items: center;
-  margin-bottom: -100px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 80vh;
-}
-
-
 
 .all-users-container {
   background-color: white;
   padding: 5%;
   border-radius: 5px;
   height: 500px;
-  width: 45%;
+  width: 40%;
+  margin: 15vh auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   overflow: hidden;
+
+  h3 {
+    border-bottom: 1px $pink solid;
+    color: $pink;
+  }
 }
 
 .messages-container {
