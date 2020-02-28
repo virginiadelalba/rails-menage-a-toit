@@ -1,14 +1,20 @@
-<!--   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<!-- Carousel -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="..." alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../..assets/images/terrace-2.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
-    </div>
+
+    <% counter = 0 %>
+    <% @terrace.photos.each do |photo| %>
+      <% if counter == 0 %>
+        <div class="carousel-item active">
+          <%= cl_image_tag @terrace.photos[0].key, class:"d-block w-100" %>
+        </div>
+      <% else %>
+        <div class="carousel-item">
+          <%= cl_image_tag @terrace.photos[counter].key, class:"d-block w-100" %>
+        </div>
+      <% end %>
+      <% counter += 1 %>
+    <% end %>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -18,27 +24,10 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div> -->
-
-<div class="d-flex flex-row">
-  <%= cl_image_tag @terrace.photos[0].key, width: 1000, height: 600, crop: :fill %>
-  <div class="d-flex flex-column">
-    <%= cl_image_tag @terrace.photos[1].key, width: 600, height: 300, crop: :fill %>
-
-    <%= cl_image_tag @terrace.photos[2].key, width: 600, height: 300, crop: :fill %>
-  </div>
 </div>
 
-
-
-</div>
-
-
-
-<div class="container d-flex mx-auto my-4">
-
-
-
+<!-- Show terrace -->
+<div class="container d-flex mx-auto my-4 mb-5">
   <div class="terrace-infos mr-3">
     <h1 class='title'> <%= @terrace.title %> </h1>
     <h4 class="address"> <%= @terrace.address %> </h4>
@@ -50,12 +39,12 @@
       <div class="owner-div">
         <h3 class="price">€ <%= @terrace.price %></h3>
         <div class="edit-btn">
-          <button class="btn btn-pink"><i class="far fa-edit"></i>  Edit</button>
+          <button class="btn btn-pink width-btn"><i class="far fa-edit"></i> Edit</button>
         </div>
         <div class="delete-btn">
           <%= link_to terrace_path(@terrace), method: :delete, data: { confirm: "Are you sure?" } do %>
-            <button class="btn btn-pink">
-              <i class="far fa-trash-alt"></i>Delete
+            <button class="btn btn-pink width-btn">
+              <i class="far fa-trash-alt"></i> Delete
             </button>
           <% end %>
         </div>
@@ -68,10 +57,10 @@
           <p id="days-range"></p>
           <p id="price-total"></p>
         </div>
-
       </div>
   <% end %>
-
 </div>
 
-  <%= link_to "Back to Terraces", terraces_path, class:'btn btn-pink mt-5 ml-5'%>
+<div class="button">
+  <%= link_to "Back to Terraces", terraces_path, class:'btn btn-green center'%>
+</div>
