@@ -78,6 +78,25 @@ body {
 }
 
 
+
+.card-confirmation {
+  width: 60%;
+  text-align: center;
+  border: 2px solid #aaa2a2;
+  padding: 20px 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.check {
+  font-size: 80px;
+  color: $pink;
+  padding: 10px 10px;
+}
+
+.booking-conf {
+  font-size: 35px;
+  padding: 20px 20px;
+
 .width-btn-wide {
   width: 160px;
 
@@ -86,4 +105,5 @@ body {
   margin-bottom: 40px;
   font-size: 18px;
   padding-bottom: 4px;
+
 }
