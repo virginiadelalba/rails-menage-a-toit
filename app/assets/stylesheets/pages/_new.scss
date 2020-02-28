@@ -2,7 +2,7 @@
   display: flex;
   margin: 0 auto;
   justify-content: space-around;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   background: #f76f6f;
   font-family: 'Roboto';
   padding-top: 50px;
@@ -10,41 +10,62 @@
 }
 
 .post {
-  width: 500px;
+  // width: 500px;
   border-radius: 3px;
   box-shadow: 0 0 5px rgb(230,230,230);
   text-align: center;
   padding: 20px;
   border: 1px solid rgb(230,230,230);
   background: white;
-}
+  margin: 0 auto;
 
 
-.pic {
-  width: 450px;
-  text-align: center;
-  margin-top: 30px;
-  height: 400px;
-  margin-bottom: 10px;
-  opacity: 0.5;
 }
 
-.background-image {
-  background-image: url("https://t2.salir.ltmcdn.com/es/places/4/5/4/img_128454_terraza-casa-suecia_0_600.jpg");
-  margin-top: 25px;
-  background-size: cover;
-  height: 475px;
-  background-position: center;
-  opacity: 0.8;
+.form-upload {
+  width: 50%;
+  margin: 0 auto;
+
 }
+
+.form-inputs{
+  width: 60%;
+  margin: 0 auto;
+}
+// .pic {
+//   width: 450px;
+//   text-align: center;
+//   margin-top: 30px;
+//   height: 400px;
+//   margin-bottom: 10px;
+//   opacity: 0.5;
+// }
+
+// .background-image {
+//   background-image: url("https://t2.salir.ltmcdn.com/es/places/4/5/4/img_128454_terraza-casa-suecia_0_600.jpg");
+//   margin-top: 25px;
+//   background-size: cover;
+//   height: 475px;
+//   background-position: center;
+//   opacity: 0.8;
+// }
 
 .photo-button-container {
   width: 100%;
-  padding-left: 25px;
+  padding-left: 150px;
   padding-right: 25px;
+
 }
 
 .photo-button {
   color: green;
   width: 100%;
+}
+
+.upload-image {
+  width: 50%;
+  background-image: url('https://images.unsplash.com/photo-1514053026555-49ce8886ae41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
