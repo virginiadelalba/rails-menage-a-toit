@@ -2,10 +2,10 @@
 
 .home-search-form {
   border-radius: 4px;
-  width: 20%;
-  height: 40px;
+  width: 400px;
+  height: 42px;
   border: none;
-  background-color: white;
+  background-color: rgba(200, 200, 200, 0.3);
   margin: 24px auto;
   color: black;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -13,8 +13,28 @@
 }
 
 .home-search-form::placeholder {
-  color: rgba(0, 0, 0, 0.6);
+  color: white;
   font-family: "Roboto";
 }
 
 
+.form-group {
+  width: 50%;
+  margin: 0 35%;
+}
+
+.fa-search {
+  background: rgba(200, 200, 200, 0.3);
+  height: 45px;
+  font-size: 28px;
+  padding: 8px 8px;
+  margin-right: 3px;
+  border-radius: 4px;
+  color: white;
+}
+
+.card-text {
+  h1 {
+    font-size: 15px;
+  }
+}

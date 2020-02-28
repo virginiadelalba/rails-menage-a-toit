@@ -30,8 +30,8 @@ $pink: #f66f6f;
 // }
 
 .home-card-header {
-  color: #f76f6f;
-  font-size: 38px;
+  color:#7c7777;
+  font-size: 25px;
 }
 
 
@@ -39,26 +39,29 @@ $pink: #f66f6f;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 80px;
+  margin-bottom: 80px;
 }
 
 .home-card {
   background-size: cover;
   background-position: center;
-  height: 240px;
+  height: 100px;
+  width: 200px;
   justify-content: center;
   padding-top: 16px;
   font-size: 32px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,1);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 5px rgba(0,0,0,0.1);
   text-align: center;
   color: #84bc45;
+  overflow: hidden;
 }
 
 .home-card-icon {
-  font-size: 80px;
+  font-size: 35px;
   margin-top: 10px;
-  color: #b7e682;
+  color: #7c7777;
 }
 
 .stars-container {
@@ -69,9 +72,18 @@ $pink: #f66f6f;
 }
 
 .home-card-stars {
-  font-size: 40px;
-  color: #b7e682;
+  font-size: 30px;
+  color: #7c7777;
 }
+
+.card-text {
+  h1{
+    color: #7c7777;
+  }
+}
+
+
+
 
 
 
