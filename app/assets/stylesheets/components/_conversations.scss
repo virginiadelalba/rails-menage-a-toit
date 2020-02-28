@@ -1,0 +1,95 @@
+.main-container {
+  width: 100%;
+  background-color: $pink;
+  justify-content: center;
+}
+
+.white-btn-div {
+  display: flex;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: white;
+  width: 10%;
+}
+
+.messages-main-container {
+  justify-content: space-around;
+  padding: 2%;
+  background-color: $pink;
+  width: 80%;
+  align-items: center;
+  margin-bottom: -100px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
+}
+
+.float-left {
+  // float: left;
+}
+
+.conversations-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+  background-color: $pink;
+  width: 80%;
+  align-items: center;
+  margin-bottom: -100px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
+}
+
+
+
+.all-users-container {
+  background-color: white;
+  padding: 5%;
+  border-radius: 5px;
+  height: 500px;
+  width: 45%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.messages-container {
+  background-color: white;
+  padding: 5%;
+  border-radius: 5px;
+  height: 500px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.reply-container {
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  background-color: white;
+  border: none;
+}
+
+.line {
+  color: $pink;
+}
+
+.list-text {
+  color: $pink;
+  opacity: 0.8;
+
+  &:hover {
+    color: $pink;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+.preview-text {
+  opacity: 0.6;
+  font-style: italic;
+  font-size: 0.8em;
+}
+

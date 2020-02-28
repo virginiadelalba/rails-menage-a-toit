@@ -6,4 +6,8 @@ Rails.application.routes.draw do
     resources :bookings, except: :show
   end
   resources :bookings, only: :show
+
+  resources :conversations do
+    resources :messages
+   end
 end
