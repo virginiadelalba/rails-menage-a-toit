@@ -1,0 +1,55 @@
+<div class="main-container">
+  <div class="conversations-container d-flex align-items-center">
+
+    <div class="ui segment all-users-container">
+      <h3 class="mb-4 text-muted">All Users</h3>
+      <p class="mt-n4 line">______________________________________________________________</p>
+      <div class="ui list w-100">
+        <% @users.each do |user| %>
+          <% if user.id != current_user.id %>
+          <div class="item d-flex justify-content-between pl-4 mt-1">
+            <div class="text-muted"> <%= user.email%> </div>
+            <div class="ml-4">
+              <div> <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post', class:"list-text"%> </div>
+            </div>
+
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+
+     <div class="ui segment all-users-container">
+      <h3 class="mb-4 text-muted">Mailbox</h3>
+      <p class="mt-n4 line w-100">______________________________________________________________</p>
+      <div class="ui list">
+        <div class="item mt-n2 d-flex flex-column">
+          <% @conversations.each do |conversation| %>
+            <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+              <% if conversation.sender_id == current_user.id %>
+                <% recipient = User.find(conversation.recipient_id) %>
+              <% else %>
+                <% recipient = User.find(conversation.sender_id) %>
+              <% end %>
+              <%= link_to recipient.email, conversation_messages_path(conversation),class:"list-text mt-1"%>
+              <div class="d-flex pl-4 preview-text">
+
+                <%= conversation.messages.last.message_time %>
+                <p>...</p>
+                <%= conversation.messages.last.body %>
+              </div>
+
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</div>
+

@@ -6,19 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "Destroy Terraces"
-Terrace.destroy_all
-
-puts "Destroy Users"
-User.destroy_all
 
 
-# puts "Creating users"
-# user1 = User.new(email: 'firstemail@gmail.com', password: '12345678')
-# user1.save
-# user2 = User.create(email: 'secondemail@gmail.com', password: '12345678')
-# user3 = User.create(email: 'thirdemail@gmail.com', password: '12345678')
-# user4 = User.create(email: 'fourthemail@gmail.com', password: '12345678')
+
+puts "Creating users"
+user1 = User.new(email: 'firstemail@gmail.com', password: '12345678')
+user1.save
+user2 = User.create(email: 'secondemail@gmail.com', password: '12345678')
+user3 = User.create(email: 'thirdemail@gmail.com', password: '12345678')
+user4 = User.create(email: 'fourthemail@gmail.com', password: '12345678')
+user5 = User.create(email: '5email@gmail.com', password: '12345678')
+user6 = User.create(email: '6email@gmail.com', password: '12345678')
+user7 = User.create(email: '7email@gmail.com', password: '12345678')
+user8 = User.create(email: '8email@gmail.com', password: '12345678')
+user9 = User.create(email: '9email@gmail.com', password: '12345678')
+user10 = User.create(email: '10email@gmail.com', password: '12345678')
+user11 = User.create(email: '11email@gmail.com', password: '12345678')
 
 # puts "Creating terraces"
 # terrace1 = Terrace.create(user: user1, title: 'Sunny Rooftop in Madrid', description: 'Enjoy the best of Madrid in our terrace.', capacity: 20, address: 'Calle Juan de Mariana, 15, 5° floor - Madrid', price: 800)
@@ -26,4 +29,4 @@ User.destroy_all
 # terrace3 = Terrace.create(user: user3, title: 'Sunny Rooftop in Panama', description: 'Enjoy the best of Panama in our terrace.', capacity: 40, address: 'Calle de Panama, 420, 8° floor - Panama', price: 1000)
 # terrace4 = Terrace.create(user: user4, title: 'Sunny Rooftop in Florida', description: 'Enjoy the best of Florida in our terrace.', capacity: 50, address: 'Main Street, 42, 4° floor - Florida', price: 1500)
 
-puts "All deleted, I hope!"
+puts "All users created, I hope!"

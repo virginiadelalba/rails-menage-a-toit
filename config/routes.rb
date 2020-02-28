@@ -4,9 +4,16 @@ Rails.application.routes.draw do
   resources :terraces  do
     resources :bookings, except: :show
   end
+
+
+  resources :conversations do
+    resources :messages
+   end
+
   resources :bookings, only: :show do
     collection do
       get 'list'
     end
   end
+
 end
