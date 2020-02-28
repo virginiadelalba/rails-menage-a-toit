@@ -10,9 +10,9 @@
   <!-- message to terrace owner -->
   <div class="d-flex justify-content-between">
     <%= f.submit "Book now", class: "btn btn-pink" %>
-
-  <%= link_to 'Message Host', conversations_path(sender_id: current_user.id, recipient_id: @terrace.user.id), method: 'post', class:"btn btn-pink width-btn-wide"%>
-
+  <% if current_user %>
+    <%= link_to 'Message Host', conversations_path(sender_id: current_user.id, recipient_id: @terrace.user.id), method: 'post', class:"btn btn-pink width-btn-wide"%>
+  <% end %>
   </div>
 
 <% end %>

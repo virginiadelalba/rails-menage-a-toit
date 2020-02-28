@@ -3,6 +3,7 @@
       <div class="user-type">
         <h4 class="p-4"></id>My upcoming bookings as a guest</h4>
           <% @bookings.each do |booking|  %>
+        if current_user == booking.user
             <div id="card-border" class="card flex-row flex-wrap align-items-center justify-content-between p-3 mb-3" style="width: 38rem">
               <div class="content">
                 <p id="pink-title" class=""><strong><%= booking.terrace.title %> </strong></p>

@@ -7,7 +7,9 @@
       <div class="card-confirmation d-flex flex-column align-items-center">
         <i class="fas fa-check-circle check"></i>
         <h1 class='booking-conf'>Your booking at <%= @terrace.title %> is confirmed!</h1>
-        <p> <%= link_to "Message Host", conversations_path(sender_id: @booking.user_id, recipient_id: @terrace.user_id), method:'post', class:"btn btn-pink"%></p>
+        <% if current_user %>
+          <p> <%= link_to "Message Host", conversations_path(sender_id: @booking.user_id, recipient_id: @terrace.user_id), method:'post', class:"btn btn-pink"%></p>
+        <% end %>
       </div>
     </div>
 
