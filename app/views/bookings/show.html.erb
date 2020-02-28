@@ -1,9 +1,14 @@
 <div class="photo" style="background-image: url('https://i.pinimg.com/originals/48/e4/e7/48e4e7b64a67b0c87ddd653a60561a25.jpg')">
   </div>
 
-<div class="container d-flex mx-auto my-4">
+<div class="container">
 
-  <div class="terrace-infos mr-3">
-    <h1 class='title'>Your booking at <%= @terrace.title %> is confirmed!</h1>
-  </div>
+    <div class="box-container d-flex justify-content-around align-items-center">
+      <div class="card-confirmation d-flex flex-column align-items-center">
+        <i class="fas fa-check-circle check"></i>
+        <h1 class='booking-conf'>Your booking at <%= @terrace.title %> is confirmed!</h1>
+        <p> <%= link_to "Message Host", conversations_path(sender_id: @booking.user_id, recipient_id: @terrace.user_id), method:'post', class:"btn btn-pink"%></p>
+      </div>
+    </div>
+
 </div>
